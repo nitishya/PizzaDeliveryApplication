@@ -24,7 +24,7 @@ A full-stack pizza ordering application where users can browse pizzas, add them 
 - Spring Cloud Gateway for API routing
 - Eureka Service Discovery
 - MongoDB & MySQL for data persistence
-- Kafka Messaging for event-driven updates
+- Kafka Messaging for event-driven updates(In Progress)
   
 🔹 DevOps & Tools:
 - Git & GitHub for version control
