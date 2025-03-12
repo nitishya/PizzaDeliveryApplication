@@ -36,3 +36,10 @@ A full-stack pizza ordering application where users can browse pizzas, add them 
 Project Structure 
 
 ![image](https://github.com/user-attachments/assets/8cfa1f46-0789-44ec-83af-7cbd70bc2435)
+
+
+📬 Contributing
+
+Feel free to fork, contribute, and submit Pull Requests. Star 🌟 this repository if you find it useful!
+
+🔗 GitHub Repo: your-repo-link
