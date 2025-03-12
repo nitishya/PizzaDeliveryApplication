@@ -37,6 +37,21 @@ Project Structure
 
 ![image](https://github.com/user-attachments/assets/8cfa1f46-0789-44ec-83af-7cbd70bc2435)
 
+---
+## 📸 Screenshots
+### 🔹 Login Page  
+![Login Page](frontend/assets/screenshots/login.png)
+
+### 🔹 Pizza List  
+![Pizza List](frontend/assets/screenshots/pizza-list.png)
+
+### 🔹 Cart  
+![Cart](frontend/assets/screenshots/cart.png)
+
+### 🔹 Order History  
+![Order History](frontend/assets/screenshots/order-history.png)
+
+
 
 📬 Contributing
 
