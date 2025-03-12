@@ -12,10 +12,12 @@ A full-stack pizza ordering application where users can browse pizzas, add them 
 - ✅ Session Management using Session Storage
 
 
- Tech Stack
+ #Tech Stack
+ 
 🔹 Frontend:
 - Angular (TypeScript, Bootstrap)
 - Angular Routing & Guards for authentication
+  
 🔹 Backend:
 - Spring Boot (3.4.2) with Microservices
 - Spring Security & JWT for authentication
@@ -23,6 +25,7 @@ A full-stack pizza ordering application where users can browse pizzas, add them 
 - Eureka Service Discovery
 - MongoDB & MySQL for data persistence
 - Kafka Messaging for event-driven updates
+  
 🔹 DevOps & Tools:
 - Git & GitHub for version control
 - Postman for API testing
