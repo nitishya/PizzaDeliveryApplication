@@ -6,7 +6,7 @@ A full-stack pizza ordering application where users can browse pizzas, add them 
 - ✅ Browse Pizzas with dynamic data fetching
 - ✅ Add to Cart & Checkout functionality
 - ✅ Order Management for users
-- ✅ Admin Dashboard to update order status
+- ✅ Admin Dashboard to update order status(In Progress)
 - ✅ Microservices Architecture with Eureka Service Discovery
 - ✅ Secure API Gateway for centralized authentication
 - ✅ Session Management using Session Storage
