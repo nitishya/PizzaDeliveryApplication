@@ -1,0 +1,30 @@
+<div class="order-detail-container">
+    <h2>Order Details</h2>
+    
+    <div *ngIf="order">
+      <p><strong>Order ID:</strong> {{ order.id }}</p>
+      <p><strong>User ID:</strong> {{ order.userId }}</p>
+      <p><strong>Order Time:</strong> {{ order.orderTime ? order.orderTime : 'Not available' }}</p>
+      <p><strong>Total Price:</strong> ${{ order.totalPrice }}</p>
+      <p><strong>Status:</strong> {{ order.status }}</p>
+  
+      <h3>Pizza Items</h3>
+      <ul>
+        <li *ngFor="let pizzaId of order.pizzaIds">
+          Pizza ID: {{ pizzaId }}
+        </li>
+      </ul>
+  
+      <!-- Admin can update order status -->
+      <div *ngIf="isAdmin">
+        <h3>Update Order Status</h3>
+        <select [(ngModel)]="order.status">
+          <option *ngFor="let status of statuses" [value]="status">{{ status }}</option>
+        </select>
+        <button (click)="updateOrderStatus(order.status)">Update Status</button>
+      </div>
+  
+      <button class="back-btn" (click)="goBack()">Back to Orders</button>
+    </div>
+  </div>
+  

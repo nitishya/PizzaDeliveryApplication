@@ -1,0 +1,25 @@
+<div class="dashboard-container">
+    <h2>Pizza is near you! Just login to order</h2>
+  
+    <!-- Display a welcome message if the user is logged in -->
+    <div *ngIf="userEmail; else loginSection">
+      <h3>Welcome, {{ userEmail }}!</h3> <!-- Show userEmail if logged in -->
+    </div>
+  
+    <!-- Else, show the login button -->
+    <ng-template #loginSection>
+      <button routerLink="/login" class="login-btn">Login</button> <!-- Login button if not logged in -->
+    </ng-template>
+  
+    <h3>Featured Pizzas 🍕</h3>
+    
+    <div class="pizza-list">
+      <div class="pizza-card" *ngFor="let pizza of pizzas">
+        <img src="{{ pizza.image }}" alt="{{ pizza.name }}">
+        <h4>{{ pizza.name }}</h4>
+        <p>{{ pizza.description }}</p>
+        <span class="price">${{ pizza.price.toFixed(2) }}</span>
+      </div>
+    </div>
+  </div>
+  

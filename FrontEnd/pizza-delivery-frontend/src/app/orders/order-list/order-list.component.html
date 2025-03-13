@@ -1,0 +1,65 @@
+<div class="order-container">
+    <h2>Order List</h2>
+
+    <!-- Cart Summary -->
+    <div *ngIf="cartItems.length > 0">
+        <h3>Cart Items</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Pizza Name</th>
+                    <th>Price</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let pizza of cartItems">
+                    <td>{{ pizza.name }}</td>
+                    <td>${{ pizza.price.toFixed(2) }}</td>
+                    <td>
+                        <button (click)="removeFromCart(pizza.id)">Remove</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h4>Total Price: ${{ totalPrice.toFixed(2) }}</h4>
+        <button (click)="placeOrder()" class="place-order-btn">Place Order</button>
+    </div>
+
+    <!-- If cart is empty -->
+    <div *ngIf="cartItems.length === 0">
+        <p>Your cart is empty. Add pizzas to your cart to place an order.</p>
+    </div>
+
+    <!-- Orders List -->
+    <div *ngIf="orders.length === 0">
+        Loading orders...
+    </div>
+
+    <table *ngIf="orders.length > 0">
+        <thead>
+            <tr>
+                <th>Order ID</th>
+                <th>User ID</th>
+                <th>Order Time</th>
+                <th>Total Price</th>
+                <th>Status</th>
+                <th>Pizza IDs</th>
+                <th>Actions</th> <!-- New column for "View Details" -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let order of orders">
+                <td>{{ order.id }}</td>
+                <td>{{ order.userId }}</td>
+                <td>{{ order.orderTime ? order.orderTime : 'N/A' }}</td>
+                <td>${{ order.totalPrice.toFixed(2) }}</td>
+                <td>{{ order.status }}</td>
+                <td>{{ order.pizzaIds.join(', ') }}</td>
+                <td>
+                    <a [routerLink]="['/orders', order.id]" class="view-btn">View Details</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

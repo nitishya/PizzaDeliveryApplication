@@ -1,0 +1,24 @@
+<div class="pizza-list">
+    <h2>Our Pizzas</h2>
+
+    <!-- Display cart count -->
+    <div class="cart-info">
+        <p><strong>Items in Cart:</strong> {{ getCartCount() }}</p>
+    </div>
+
+    <!-- Display pizzas -->
+    <div *ngIf="pizzas.length > 0; else noPizzas" class="pizza-container">
+        <div *ngFor="let pizza of pizzas" class="pizza-card">
+            <h3>{{ pizza.name }}</h3>
+            <p>{{ pizza.description }}</p>
+            <p><strong>Price:</strong> ${{ pizza.price }}</p>
+            <p><strong>Size:</strong> {{ pizza.size }}</p>
+            <button (click)="addToCart(pizza)">Add to Cart</button>
+        </div>
+    </div>
+
+    <!-- If no pizzas available -->
+    <ng-template #noPizzas>
+        <p>No pizzas available.</p>
+    </ng-template>
+</div>

@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    background-image: url('assets/images/pizzabg.png.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Keeps background fixed */
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+ 
+    
+}

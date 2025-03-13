@@ -1,0 +1,15 @@
+<header class="navbar">
+    <div class="logo">
+      <span>Pizza Delivery</span>
+    </div>
+    <nav class="nav-links">
+      <a routerLink="/" routerLinkActive="active">Home</a>
+      <a routerLink="/pizzas" routerLinkActive="active">Pizzas</a>
+      <a routerLink="/orders" *ngIf="isAuthenticated()" routerLinkActive="active">My Orders</a>
+
+      <a routerLink="/login" *ngIf="!isAuthenticated()" routerLinkActive="active">Login</a>
+      <a routerLink="/register" *ngIf="!isAuthenticated()" routerLinkActive="active">Register</a>
+
+      <button *ngIf="isAuthenticated()" (click)="logout()">Logout</button>
+    </nav>
+</header>
